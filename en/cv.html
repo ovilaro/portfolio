@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV · Oriol Vilaró Roca</title>
+<meta name="description" content="Portfolio d'Oriol Vilaró Roca: videojocs i aplicacions mòbils.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../cv.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../en/index.html">Oriol Vilaró Roca</a>
+  <nav class="langs" aria-label="Language / Idioma">
+    <a class="lang" data-lang="en" href="../en/cv.html">EN</a>
+    <a class="lang" data-lang="ca" href="../ca/cv.html">CA</a>
+    <a class="lang" data-lang="es" href="../es/cv.html">ES</a>
+    
+  </nav>
+</header>
+<main class="cv-page">
+<header class="cv-head">
+<h1>Oriol Vilaró Roca</h1>
+<p class="cv-subtitle"></p>
+<p class="cv-contact"><span class="cv-mail"><a class="mail" data-mu="ovilaro" data-md="fastmail.com" hidden></a><noscript>ovilaro [arrova] fastmail [punt] com</noscript></span>
+<span class="cv-loc"><span class="cv-ico">&#x1F4CD;</span> Tarroja de Segarra, Lleida, Spain</span></p>
+</header>
+
+<h2 id="profile">Profile</h2>
+<p>Software engineer with 15+ years building mobile apps and games,
+working solo or in a team and leading the technical side of projects,
+acting as the point of contact for multidisciplinary profiles.</p>
+<h2 id="experience">Experience</h2>
+<p><span class="jobtitle">Personal Projects</span> — 2025–present</p>
+<ul>
+<li>Development of personal projects, such as Mosaic — a Flutter
+leisure-management app to catalog games and books: <a
+href="https://github.com/ovilaro/mosaic">github.com/ovilaro/mosaic</a></li>
+<li>Integration of AI tools (Codex, Claude Code, OpenCode) into the
+daily workflow.</li>
+</ul>
+<p><span class="jobtitle">Game Developer · DABADU GAMES</span> —
+2017–2024</p>
+<ul>
+<li>Lead developer of Shell Shocked and Giant Dancing Plushies and
+contributor to It’s Full of Sparks —three Unity games featured on the
+App Store and Google Play.</li>
+<li>Lead developer of Hello Kitty and Friends: Happiness Parade (Sanrio
+license), published by Netflix on iOS and Android, and its later
+Nintendo Switch port with expanded content.</li>
+<li>Godot prototype with state machines and procedural level
+generation.</li>
+</ul>
+<p><span class="jobtitle">Team Lead \& Mobile App Developer · MODDITY</span>
+— 2014–2017</p>
+<ul>
+<li>Led programming teams building iOS and Android apps.</li>
+<li>Specialized in iOS development.</li>
+</ul>
+<p><span class="jobtitle">Mobile App Programmer · BAZINGA SYSTEMS</span>
+— 2011–2014</p>
+<ul>
+<li>Programmed iOS apps for iPhone and iPad.</li>
+</ul>
+<p><span class="jobtitle">Database App Programmer · BONÀREA</span> —
+2005–2010</p>
+<ul>
+<li>Developed a warehouse management app: stock, orders,
+inbound/outbound, and staff scheduling.</li>
+</ul>
+<h2 id="education-certifications">Education &amp; Certifications</h2>
+<p><strong>Mobile app development for iOS and Android with
+Flutter</strong> — CIFO L’Hospitalet, 2025, 240 h, Notable</p>
+<p><strong>Higher Vocational Degree (CFGS) in Software Application
+Development</strong> — La Salle Gràcia, Barcelona, 2002–2004</p>
+<p><strong>C++ Programming</strong> — CIPSA, 2001–2002</p>
+<h2 id="skills">Skills</h2>
+<ul>
+<li><strong>Programming Languages</strong>: C, C++, Obj-C, C#, Java,
+Swift, JS, GDScript, Flutter (Dart)</li>
+<li><strong>Game Engines</strong>: Unity, Godot</li>
+<li><strong>IDEs</strong>: Visual Studio Code, Xcode, Android Studio,
+JetBrains Rider</li>
+<li><strong>Team tools</strong>: Trello, Jira, Google Workspace</li>
+<li><strong>Dev &amp; release tools</strong>: Git (GitHub, Bitbucket),
+TestFlight / App Store Connect, Google Play Console, Firebase</li>
+<li><strong>Methodologies</strong>: Agile, Scrum</li>
+<li><strong>AI tools</strong>: Codex, Claude Code, OpenCode,
+Plannotator</li>
+</ul>
+<h2 id="languages">Languages</h2>
+<ul>
+<li>Catalan · high level</li>
+<li>Spanish · high level</li>
+<li>English · intermediate level</li>
+</ul>
+</main>
+<footer class="site-footer">
+  <p><a href="../en/index.html">Portfolio</a> · <a href="https://github.com/ovilaro">GitHub</a> · <a class="mail" data-mu="ovilaro" data-md="fastmail.com" hidden></a><noscript><span class="mail-ns">ovilaro [arrova] fastmail [punt] com</span></noscript></p>
+</footer>
+<script>
+document.querySelectorAll('a.lang').forEach(function (el) {
+  el.addEventListener('click', function () {
+    try { localStorage.setItem('portfolio-lang', el.dataset.lang); } catch (e) {}
+  });
+});
+document.querySelectorAll('a.mail').forEach(function (el) {
+  var addr = el.dataset.mu + '@' + el.dataset.md;
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+  el.hidden = false;
+});
+</script>
+</body>
+</html>

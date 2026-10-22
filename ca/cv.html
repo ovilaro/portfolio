@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currículum · Oriol Vilaró Roca</title>
+<meta name="description" content="Portfolio d'Oriol Vilaró Roca: videojocs i aplicacions mòbils.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../cv.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../ca/index.html">Oriol Vilaró Roca</a>
+  <nav class="langs" aria-label="Language / Idioma">
+    <a class="lang" data-lang="en" href="../en/cv.html">EN</a>
+    <a class="lang" data-lang="ca" href="../ca/cv.html">CA</a>
+    <a class="lang" data-lang="es" href="../es/cv.html">ES</a>
+    
+  </nav>
+</header>
+<main class="cv-page">
+<header class="cv-head">
+<h1>Oriol Vilaró Roca</h1>
+<p class="cv-subtitle">Desenvolupador d'aplicacions mòbils i videojocs</p>
+<p class="cv-contact"><span class="cv-mail"><a class="mail" data-mu="ovilaro" data-md="fastmail.com" hidden></a><noscript>ovilaro [arrova] fastmail [punt] com</noscript></span>
+<span class="cv-loc"><span class="cv-ico">&#x1F4CD;</span> Tarroja de Segarra, Lleida, Espanya</span></p>
+</header>
+
+<h2 id="perfil">Perfil</h2>
+<p>Desenvolupador de programari amb més de 15 anys creant aplicacions
+mòbils i videojocs, treballant en solitari o en equip i liderant la part
+tècnica dels projectes, fent de porta d’enllaç amb perfils
+multidisciplinaris.</p>
+<h2 id="experiència">Experiència</h2>
+<p><span class="jobtitle">Projectes personals</span> — 2025–actual</p>
+<ul>
+<li>Desenvolupament de projectes personals, com ara Mosaic — aplicació
+Flutter de gestió d’oci per catalogar videojocs i llibres: <a
+href="https://github.com/ovilaro/mosaic">github.com/ovilaro/mosaic</a></li>
+<li>Integració d’eines d’IA (Codex, Claude Code, OpenCode) al flux de
+treball diari.</li>
+</ul>
+<p><span class="jobtitle">Desenvolupador de videojocs · DABADU GAMES</span>
+— 2017–2024</p>
+<ul>
+<li>Desenvolupador principal de Shell Shocked i Giant Dancing Plushies i
+col·laborador a It’s Full of Sparks —tres videojocs en Unity destacats a
+l’App Store i Google Play.</li>
+<li>Desenvolupador principal de Hello Kitty and Friends: Happiness
+Parade (llicència de Sanrio), publicat per Netflix a iOS i Android, i el
+seu posterior port a Nintendo Switch amb contingut ampliat.</li>
+<li>Prototip en Godot amb màquines d’estat i generació de nivells
+procedurals.</li>
+</ul>
+<p><span class="jobtitle">Cap d'equip i desenvolupador d'aplicacions mòbils · MODDITY</span>
+— 2014–2017</p>
+<ul>
+<li>Direcció d’equips de programadors desenvolupant aplicacions iOS i
+Android.</li>
+<li>Especialització en desenvolupament iOS.</li>
+</ul>
+<p><span class="jobtitle">Programador d'aplicacions mòbils · BAZINGA SYSTEMS</span>
+— 2011–2014</p>
+<ul>
+<li>Programació d’aplicacions iOS per a iPhone i iPad.</li>
+</ul>
+<p><span class="jobtitle">Programador d'aplicacions de BBDD · BONÀREA</span>
+— 2005–2010</p>
+<ul>
+<li>Desenvolupament d’una aplicació de gestió de magatzem: estoc,
+comandes, entrades/sortides i horaris del personal.</li>
+</ul>
+<h2 id="educació-i-certificacions">Educació i Certificacions</h2>
+<p><strong>Desenvolupament d’aplicacions mòbils per a iOS i Android amb
+Flutter</strong> — CIFO L’Hospitalet, 2025, 240 h, Notable</p>
+<p><strong>CFGS Desenvolupament d’Aplicacions Informàtiques</strong> —
+La Salle Gràcia, Barcelona, 2002–2004</p>
+<p><strong>Programació en C++</strong> — CIPSA, 2001–2002</p>
+<h2 id="aptituds">Aptituds</h2>
+<ul>
+<li><strong>Programming Languages</strong>: C, C++, Obj-C, C#, Java,
+Swift, JS, GDScript, Flutter (Dart)</li>
+<li><strong>Game Engines</strong>: Unity, Godot</li>
+<li><strong>IDEs</strong>: Visual Studio Code, Xcode, Android Studio,
+JetBrains Rider</li>
+<li><strong>Team tools</strong>: Trello, Jira, Google Workspace</li>
+<li><strong>Dev &amp; release tools</strong>: Git (GitHub, Bitbucket),
+TestFlight / App Store Connect, Google Play Console, Firebase</li>
+<li><strong>Methodologies</strong>: Agile, Scrum</li>
+<li><strong>AI tools</strong>: Codex, Claude Code, OpenCode,
+Plannotator</li>
+</ul>
+<h2 id="idiomes">Idiomes</h2>
+<ul>
+<li>Català · nivell alt</li>
+<li>Espanyol · nivell alt</li>
+<li>Anglès · nivell mitjà</li>
+</ul>
+</main>
+<footer class="site-footer">
+  <p><a href="../ca/index.html">Portfolio</a> · <a href="https://github.com/ovilaro">GitHub</a> · <a class="mail" data-mu="ovilaro" data-md="fastmail.com" hidden></a><noscript><span class="mail-ns">ovilaro [arrova] fastmail [punt] com</span></noscript></p>
+</footer>
+<script>
+document.querySelectorAll('a.lang').forEach(function (el) {
+  el.addEventListener('click', function () {
+    try { localStorage.setItem('portfolio-lang', el.dataset.lang); } catch (e) {}
+  });
+});
+document.querySelectorAll('a.mail').forEach(function (el) {
+  var addr = el.dataset.mu + '@' + el.dataset.md;
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+  el.hidden = false;
+});
+</script>
+</body>
+</html>
