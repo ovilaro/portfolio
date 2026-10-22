@@ -95,6 +95,14 @@ img.wide { max-width: 620px; }
 /* Retall de premsa: es mostra a la seva mida natural. */
 img.natural { width: auto; max-width: 100%; }
 
+/* Flux d'imatges: 2 per fila si hi caben, una per fila en pantalles petites.
+   Les imatges són filles directes de <main>, i els títols fan de separador. */
+main > img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px 10px 0;
+}
+
 table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
 th, td {
   text-align: left;
