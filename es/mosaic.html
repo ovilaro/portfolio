@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11151B" media="(prefers-color-scheme: dark)">
+<title>Mosaic · Oriol Vilaró Roca</title>
+<meta name="description" content="Portfolio d'Oriol Vilaró Roca: videojocs i aplicacions mòbils.">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../es/index.html">Oriol Vilaró Roca</a>
+  <nav class="langs" aria-label="Language / Idioma">
+    <a class="lang" data-lang="en" href="../en/mosaic.html">EN</a>
+    <a class="lang" data-lang="ca" href="../ca/mosaic.html">CA</a>
+    <a class="lang" data-lang="es" href="../es/mosaic.html">ES</a>
+    <a class="cv" href="cv.html">CV</a>
+  </nav>
+</header>
+<main>
+<h1 id="mosaic">Mosaic</h1>
+<p>Aplicación de gestión del ocio hecha con Flutter, para catalogar
+videojuegos y libros en un solo lugar: búsqueda en bases de datos en
+línea, estado de progreso y cuadrícula en cascada con las portadas.
+Todos los datos se guardan en el dispositivo, sin cuenta.</p>
+<p>Empezó como proyecto del curso de Flutter (diciembre de 2025) y desde
+entonces ha seguido creciendo.</p>
+<img src="../assets/mosaic/app-icon.png" alt="Icono de Mosaic" class="icon">
+
+<h2 id="ficha-rápida">Ficha rápida</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rol</strong></td>
+<td>Desarrollo individual</td>
+</tr>
+<tr>
+<td><strong>Año</strong></td>
+<td>2025–actual</td>
+</tr>
+<tr>
+<td><strong>Origen</strong></td>
+<td>Proyecto del curso de Flutter (diciembre de 2025)</td>
+</tr>
+<tr>
+<td><strong>Plataformas</strong></td>
+<td>iOS, Android, macOS</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Flutter (Dart), Provider, Hive CE</td>
+</tr>
+<tr>
+<td><strong>Estado</strong></td>
+<td>Proyecto personal, código abierto</td>
+</tr>
+<tr>
+<td><strong>Código</strong></td>
+<td><a
+href="https://github.com/ovilaro/mosaic">github.com/ovilaro/mosaic</a></td>
+</tr>
+<tr>
+<td><strong>Presentación</strong></td>
+<td><a href="../assets/mosaic/presentacio.pdf">PDF, 5 páginas</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="contexto">Contexto</h2>
+<ul>
+<li><strong>El problema</strong> — el poco tiempo libre acaba en scroll
+infinito y el backlog no deja de crecer.</li>
+<li><strong>La propuesta</strong> — una app para gestionar el ocio que
+queremos consumir: qué tenemos pendiente, qué tenemos a medias y qué
+hemos acabado.</li>
+</ul>
+<h2 id="funciones">Funciones</h2>
+<ul>
+<li><strong>Buscar y añadir</strong> — juegos vía IGDB y libros vía Open
+Library.</li>
+<li><strong>Seguimiento del progreso</strong> — Sin empezar, En curso o
+Acabado.</li>
+<li><strong>Cuadrícula en cascada</strong> con las portadas de la
+colección.</li>
+<li><strong>Filtros por categoría</strong> (juegos, libros o ambos), con
+preferencias independientes por pestaña.</li>
+<li><strong>Ordenación</strong> por fecha de alta o de modificación,
+ascendente o descendente.</li>
+<li><strong>Ficha de detalle</strong> con portada, descripción y tabla
+de metadatos.</li>
+<li><strong>Compartir</strong> la ficha con la imagen de portada.</li>
+<li><strong>Temas claro y oscuro</strong> — blanco, negro o siguiendo el
+dispositivo.</li>
+<li><strong>Accesibilidad</strong> — etiquetas en la barra de navegación
+para lectores de pantalla.</li>
+<li><strong>Offline-first</strong> — datos locales con Hive CE, sin
+cuenta.</li>
+<li><strong>Diseño adaptable</strong> — a partir de 900 px de ancho, la
+cuadrícula y el detalle se muestran lado a lado (en desarrollo).</li>
+</ul>
+<h2 id="vídeo">Vídeo</h2>
+<div class="video portrait">
+<video controls preload="metadata" poster="../assets/mosaic/not-started.jpg">
+<source src="../assets/mosaic/entrega-curs.mp4" type="video/mp4">
+Tu navegador no puede reproducir este vídeo. <a href="../assets/mosaic/entrega-curs.mp4">Descárgalo</a>.
+</video>
+</div>
+
+<h2 id="capturas">Capturas</h2>
+<h3 id="entrega-del-curso-diciembre-de-2025">Entrega del curso
+(diciembre de 2025)</h3>
+<img src="../assets/mosaic/not-started.jpg" alt="Mosaic: pestaña Not Started con los juegos pendientes">
+
+<img src="../assets/mosaic/in-progress.jpg" alt="Mosaic: pestaña In Progress con los juegos en curso">
+
+<img src="../assets/mosaic/finished.jpg" alt="Mosaic: pestaña Finished con los juegos acabados">
+</main>
+<footer class="site-footer">
+  <p><a href="../es/index.html">Portfolio</a> · <a href="https://github.com/ovilaro">GitHub</a> · <a class="mail" data-mu="ovilaro" data-md="fastmail.com" hidden></a><noscript><span class="mail-ns">ovilaro [arrova] fastmail [punt] com</span></noscript></p>
+</footer>
+<script>
+document.querySelectorAll('a.lang').forEach(function (el) {
+  el.addEventListener('click', function () {
+    try { localStorage.setItem('portfolio-lang', el.dataset.lang); } catch (e) {}
+  });
+});
+document.querySelectorAll('a.mail').forEach(function (el) {
+  var addr = el.dataset.mu + '@' + el.dataset.md;
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+  el.hidden = false;
+});
+</script>
+</body>
+</html>

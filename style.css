@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --accent: #2E6E8E;
   --accent-dark: #245670;
   --text: #1f2733;
@@ -6,6 +7,25 @@
   --rule: #E2E5EA;
   --bg: #ffffff;
   --code: #f2f5f7;
+}
+
+/* Tema fosc: se segueix la preferència del navegador o del sistema
+   (prefers-color-scheme), sense commutador propi. Es limita a `screen`
+   perquè la impressió surti sempre en clar. */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --accent: #7FBBD8;
+    --accent-dark: #A6D2E6;
+    --text: #E6EAF0;
+    --muted: #9BA6B4;
+    --rule: #2A323D;
+    --bg: #11151B;
+    --code: #1B222B;
+  }
+
+  /* Les captures tenen fons blanc: un contorn una mica més clar les separa
+     del fons fosc. */
+  img { border-color: #3A4553; }
 }
 
 * { box-sizing: border-box; }
@@ -94,6 +114,43 @@ img.wide { max-width: 620px; }
 
 /* Retall de premsa: es mostra a la seva mida natural. */
 img.natural { width: auto; max-width: 100%; }
+
+/* Icona d'aplicació: més petita que una captura. */
+img.icon { max-width: 132px; }
+
+/* Vídeo incrustat: 16:9 i adaptatiu. */
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 1.2rem;
+}
+
+.video iframe,
+.video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: #000;
+}
+
+/* Vídeo vertical (9:16), per a gravacions de pantalla de mòbil.
+   L'original és 1920×1080 amb el contingut centrat i bandes negres als
+   costats: `object-fit: cover` retalla les bandes i deixa només la pantalla.
+   L'amplada coincideix amb la de les captures (360 px). */
+.video.portrait {
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+}
+
+.video.portrait video,
+.video.portrait iframe {
+  object-fit: cover;
+}
 
 /* Flux d'imatges: 2 per fila si hi caben, una per fila en pantalles petites.
    Les imatges són filles directes de <main>, i els títols fan de separador. */
