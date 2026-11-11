@@ -106,6 +106,31 @@ compte.</li>
 la graella i el detall es mostren costat a costat (en
 desenvolupament).</li>
 </ul>
+<h2 id="mètode">Mètode</h2>
+<p>Mosaic va néixer com a projecte del curs de Flutter, sense cap agent
+pel mig. El 2026 vaig decidir aprendre programació agèntica i des
+d'aleshores el projecte es porta així: un document de convencions al
+repositori, <code>AGENTS.md</code>, descriu l'arquitectura, el model de
+dades, el tema, les regles de les API i el catàleg de widgets, i
+qualsevol sessió comença amb el mateix context i les mateixes regles en
+lloc d'un encàrrec improvisat.</p>
+<ul>
+<li><strong>Convencions al repositori</strong> — <code>AGENTS.md</code>
+és a l'arrel des de l'abril del 2026 i s'ha anat revisant amb el
+projecte.</li>
+<li><strong>Regles dures</strong> — els fitxers generats
+(<code>.g.dart</code> i l'esquema de Hive) no es toquen a mà: qualsevol
+canvi de model passa per <code>build_runner</code>.</li>
+<li><strong>Treball fet amb aquest flux</strong> — migració d'Isar
+Community a Hive CE (que va desbloquejar <code>build_runner</code>
+2.15.1 → 2.16.1), substitució de CocoaPods per Swift Package Manager a
+iOS i macOS, i toolchain al dia (Flutter 3.47.5, AGP 9.1, Gradle 9.3.1,
+Kotlin 2.4).</li>
+<li><strong>Fora del projecte</strong> — contribucions amb PR a codi
+obert: <a href="https://github.com/trufae/parla/pull/51">parla #51</a> i
+<a href="https://github.com/trufae/parla/pull/53">parla #53</a>, dues
+correccions de macOS mergejades l'agost del 2026.</li>
+</ul>
 <h2 id="vídeo">Vídeo</h2>
 <div class="video portrait">
 <video controls preload="metadata" poster="../assets/mosaic/not-started.jpg">

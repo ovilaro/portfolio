@@ -106,6 +106,30 @@ account.</li>
 <li><strong>Adaptive layout</strong> — from 900 px wide, grid and detail
 sit side by side (work in progress).</li>
 </ul>
+<h2 id="method">Method</h2>
+<p>Mosaic was born as a Flutter course project, with no agent involved.
+In 2026 I decided to learn agentic programming and the project has been
+run that way ever since: a conventions document in the repository,
+<code>AGENTS.md</code>, describes the architecture, the data model,
+theming, API rules and the widget catalog, and every session starts from
+the same context and the same rules instead of an improvised prompt.</p>
+<ul>
+<li><strong>Conventions in the repository</strong> —
+<code>AGENTS.md</code> has been at the root since April 2026 and is
+revised as the project changes.</li>
+<li><strong>Hard rules</strong> — generated files (<code>.g.dart</code>
+and the Hive schema) are never edited by hand: any model change goes
+through <code>build_runner</code>.</li>
+<li><strong>Work done under this flow</strong> — migration from Isar
+Community to Hive CE (which unblocked <code>build_runner</code> 2.15.1 →
+2.16.1), CocoaPods replaced by Swift Package Manager on iOS and macOS,
+and an up-to-date toolchain (Flutter 3.47.5, AGP 9.1, Gradle 9.3.1,
+Kotlin 2.4).</li>
+<li><strong>Beyond the project</strong> — open-source contributions by
+pull request: <a href="https://github.com/trufae/parla/pull/51">parla
+#51</a> and <a href="https://github.com/trufae/parla/pull/53">parla
+#53</a>, two macOS fixes merged in August 2026.</li>
+</ul>
 <h2 id="video">Video</h2>
 <div class="video portrait">
 <video controls preload="metadata" poster="../assets/mosaic/not-started.jpg">
