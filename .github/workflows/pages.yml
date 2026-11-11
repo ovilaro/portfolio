@@ -20,7 +20,10 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  # Grup propi, no «pages»: el workflow intern de Pages fa servir aquell nom i,
+  # si es queda encallat en cua, bloqueja qualsevol altra execució del mateix
+  # grup. Amb un nom diferent aquest desplegament no queda mai darrere seu.
+  group: pages-deploy
   cancel-in-progress: true
 
 jobs:
