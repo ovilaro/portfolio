@@ -1,0 +1,41 @@
+# Desplegament del lloc amb GitHub Actions.
+#
+# Per què existeix: el constructor intern de Pages (l'origen «Deploy from a
+# branch») va començar a fallar amb `startup_failure` i 0 jobs —un error de
+# GitHub, no del contingut— i el lloc es va quedar congelat en un build vell.
+# Amb aquest workflow el desplegament passa per `actions/deploy-pages`, que
+# dona logs de veritat i es pot tornar a llançar a mà.
+#
+# Requereix que a Settings → Pages l'origen sigui **GitHub Actions**.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          # El lloc es publica des de l'arrel del repo. L'acció ja exclou
+          # .git i .github de l'artefacte.
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
