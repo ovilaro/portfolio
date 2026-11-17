@@ -192,3 +192,48 @@ ul { padding-left: 1.2rem; }
   font-size: 0.9rem;
 }
 .site-footer a { color: var(--accent); }
+
+/* Portada: targetes de projecte */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+@media (max-width: 620px) {
+  .cards { grid-template-columns: 1fr; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+  color: inherit;
+  text-decoration: none;
+}
+
+.card:hover { border-color: var(--accent); }
+
+.card img {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  display: block;
+}
+
+.card-body { padding: 0.8rem 1rem 1rem; }
+.card-title { display: block; font-weight: 700; color: var(--accent-dark); }
+.card-meta { display: block; margin-top: 2px; color: var(--muted); font-size: 0.85rem; }
+.card-desc { display: block; margin-top: 6px; font-size: 0.92rem; }
+
+/* Crítiques addicionals */
+details { margin-top: 1rem; }
+summary { cursor: pointer; color: var(--accent); font-weight: 600; }
