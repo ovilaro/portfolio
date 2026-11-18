@@ -116,6 +116,13 @@ Your browser can't play this video. <a href="../assets/mosaic/entrega-curs.mp4">
 <li><strong>Hard rules</strong> — generated files (<code>.g.dart</code> and the Hive schema) are never edited by hand: any model change goes through <code>build_runner</code>.</li>
 <li><strong>Work done under this flow</strong> — migration from Isar Community to Hive CE (which unblocked <code>build_runner</code> 2.15.1 → 2.16.1), CocoaPods replaced by Swift Package Manager on iOS and macOS, and an up-to-date toolchain (Flutter 3.47.5, AGP 9.1, Gradle 9.3.1, Kotlin 2.4).</li>
 </ul>
+<h3 id="written-by-me-assisted-by-agents">Written by me, assisted by agents</h3>
+<p>I wrote the whole course project (December 2025) myself, with no agent involved. Since April 2026 the sessions are agentic: I define the problem and the rules, the agent proposes the change and I review it, test it and commit it. Nothing reaches the repository without that review.</p>
+<h2 id="technical-decisions">Technical decisions</h2>
+<ul>
+<li><strong>Hive CE instead of Isar</strong> — Isar Community was not compatible with the <code>build_runner</code> version the project needed; the change unblocked <code>build_runner</code> 2.15.1 → 2.16.1 and left a single generator for the data model.</li>
+<li><strong>Swift Package Manager instead of CocoaPods</strong> — one less dependency layer and native builds on iOS and macOS, with no pods in between.</li>
+</ul>
 <h2 id="screenshots">Screenshots</h2>
 <h3 id="delivery-screenshots-december-2025">Delivery screenshots (December 2025)</h3>
 <img loading="lazy" decoding="async" src="../assets/mosaic/not-started.jpg" alt="Mosaic: Not Started tab with pending games">
