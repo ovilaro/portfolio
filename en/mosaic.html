@@ -37,7 +37,7 @@
 <main>
 <h1 id="mosaic">Mosaic</h1>
 <p>A leisure-management app built with Flutter to catalogue games and books in one place: online database search, progress status and a waterfall grid of cover art. Everything is stored on the device, no account required.</p>
-<p>It started as a Flutter course project (December 2025) and has kept growing since.</p>
+<p>It started as the final project for the Flutter course (December 2025), developed by me with no AI tools, and has kept growing since.</p>
 <h2 id="delivery-video-december-2025">Delivery video (December 2025)</h2>
 <p>Recorded as the course wrapped up, before the project kept growing.</p>
 <div class="video portrait">
@@ -110,18 +110,18 @@ Your browser can't play this video. <a href="../assets/mosaic/entrega-curs.mp4">
 <li><strong>Adaptive layout</strong> — from 900 px wide, grid and detail sit side by side.</li>
 </ul>
 <h2 id="method">Method</h2>
-<p>Mosaic was born as a Flutter course project, with no agent involved. In 2026 I decided to learn agentic programming and the project has been run that way ever since: a conventions document in the repository, <code>AGENTS.md</code>, describes the architecture, the data model, theming, API rules and the widget catalogue, and every session starts from the same context and the same rules instead of an improvised prompt.</p>
+<p>I took the Flutter course to learn, and the final project was Mosaic, with no agent involved. Once it ended I wanted to learn agentic programming and used Mosaic as a practice ground: the goal was learning to work with agents, and the app improved as a side effect. The project has been run that way ever since: a conventions document in the repository, <code>AGENTS.md</code>, describes the architecture, the data model, theming, API rules and the widget catalogue, and every session starts from the same context and the same rules instead of an improvised prompt.</p>
 <ul>
 <li><strong>Conventions in the repository</strong> — <code>AGENTS.md</code> has been at the root since April 2026 and is revised as the project changes.</li>
 <li><strong>Hard rules</strong> — generated files (<code>.g.dart</code> and the Hive schema) are never edited by hand: any model change goes through <code>build_runner</code>.</li>
 <li><strong>Work done under this flow</strong> — migration from Isar Community to Hive CE (which unblocked <code>build_runner</code> 2.15.1 → 2.16.1), CocoaPods replaced by Swift Package Manager on iOS and macOS, and an up-to-date toolchain (Flutter 3.47.5, AGP 9.1, Gradle 9.3.1, Kotlin 2.4).</li>
 </ul>
-<h3 id="written-by-me-assisted-by-agents">Written by me, assisted by agents</h3>
-<p>I wrote the whole course project (December 2025) myself, with no agent involved. Since April 2026 the sessions are agentic: I define the problem and the rules, the agent proposes the change and I review it, test it and commit it. Nothing reaches the repository without that review.</p>
+<h3 id="written-by-me-agents-came-later">Written by me; agents came later</h3>
+<p>Mosaic is the final project for the Flutter course (December 2025) and I developed it myself, with no AI tools. After the course I started learning agentic tools out of my own interest and practised with the app. Since April 2026 the sessions are agentic: I define the problem and the rules, the agent proposes the change and I review it, test it and commit it. Nothing reaches the repository without that review.</p>
 <h2 id="technical-decisions">Technical decisions</h2>
 <ul>
-<li><strong>Hive CE instead of Isar</strong> — Isar Community was not compatible with the <code>build_runner</code> version the project needed; the change unblocked <code>build_runner</code> 2.15.1 → 2.16.1 and left a single generator for the data model.</li>
-<li><strong>Swift Package Manager instead of CocoaPods</strong> — one less dependency layer and native builds on iOS and macOS, with no pods in between.</li>
+<li><strong>Hive CE instead of Isar</strong> — Isar Community was not compatible with the <code>build_runner</code> version the project needed. The result: <code>build_runner</code> 2.15.1 → 2.16.1 unblocked and a single generator for the data model.</li>
+<li><strong>Swift Package Manager instead of CocoaPods</strong> — one less dependency layer. The result: native builds on iOS and macOS, with no pods in between.</li>
 </ul>
 <h2 id="screenshots">Screenshots</h2>
 <h3 id="delivery-screenshots-december-2025">Delivery screenshots (December 2025)</h3>

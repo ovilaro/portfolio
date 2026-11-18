@@ -37,7 +37,7 @@
 <main>
 <h1 id="mosaic">Mosaic</h1>
 <p>Aplicació de gestió de l'oci feta amb Flutter, per catalogar videojocs i llibres en un sol lloc: cerca a bases de dades en línia, estat de progrés i graella tipus cascada amb les portades. Totes les dades es guarden al dispositiu, sense compte.</p>
-<p>Va començar com a projecte del curs de Flutter (desembre de 2025) i des d'aleshores ha continuat creixent.</p>
+<p>Va començar com a projecte final del curs de Flutter (desembre de 2025), desenvolupat per mi sense cap eina d'IA, i des d'aleshores ha continuat creixent.</p>
 <h2 id="vídeo-de-lentrega-desembre-de-2025">Vídeo de l'entrega (desembre de 2025)</h2>
 <p>Enregistrat en el moment de tancar el curs, abans que el projecte continués creixent.</p>
 <div class="video portrait">
@@ -110,18 +110,18 @@ El teu navegador no pot reproduir aquest vídeo. <a href="../assets/mosaic/entre
 <li><strong>Disseny adaptable</strong> — a partir de 900 px d'amplada, la graella i el detall es mostren costat a costat.</li>
 </ul>
 <h2 id="mètode">Mètode</h2>
-<p>Mosaic va néixer com a projecte del curs de Flutter, sense cap agent pel mig. El 2026 vaig decidir aprendre programació agèntica i des d'aleshores el projecte es porta així: un document de convencions al repositori, <code>AGENTS.md</code>, descriu l'arquitectura, el model de dades, el tema, les regles de les API i el catàleg de widgets, i qualsevol sessió comença amb el mateix context i les mateixes regles en lloc d'un encàrrec improvisat.</p>
+<p>Vaig fer el curs de Flutter per aprendre'n i el projecte final va ser Mosaic, sense cap agent pel mig. En acabar, vaig voler aprendre programació agèntica i vaig fer servir Mosaic com a camp de pràctiques: l'objectiu era aprendre a fer anar agents, i la millora de l'app va venir de retruc. Des d'aleshores el projecte es porta així: un document de convencions al repositori, <code>AGENTS.md</code>, descriu l'arquitectura, el model de dades, el tema, les regles de les API i el catàleg de widgets, i qualsevol sessió comença amb el mateix context i les mateixes regles en lloc d'un encàrrec improvisat.</p>
 <ul>
 <li><strong>Convencions al repositori</strong> — <code>AGENTS.md</code> és a l'arrel des de l'abril del 2026 i s'ha anat revisant amb el projecte.</li>
 <li><strong>Regles dures</strong> — els fitxers generats (<code>.g.dart</code> i l'esquema de Hive) no es toquen a mà: qualsevol canvi de model passa per <code>build_runner</code>.</li>
 <li><strong>Treball fet amb aquest flux</strong> — migració d'Isar Community a Hive CE (que va desbloquejar <code>build_runner</code> 2.15.1 → 2.16.1), substitució de CocoaPods per Swift Package Manager a iOS i macOS, i toolchain al dia (Flutter 3.47.5, AGP 9.1, Gradle 9.3.1, Kotlin 2.4).</li>
 </ul>
-<h3 id="escrit-per-mi-assistit-per-agents">Escrit per mi, assistit per agents</h3>
-<p>El curs (desembre de 2025) el vaig escriure jo sencer, sense cap agent. Des de l'abril del 2026 les sessions són agèntiques: jo defineixo el problema i les regles, l'agent proposa el canvi i jo el reviso, el provo i el commito. Cap canvi arriba al repositori sense aquesta revisió.</p>
+<h3 id="escrit-per-mi-els-agents-després">Escrit per mi; els agents, després</h3>
+<p>Mosaic és el projecte final del curs de Flutter (desembre de 2025) i el vaig desenvolupar jo, sense cap eina d'IA. En acabar el curs vaig començar a aprendre eines agèntiques per interès propi i les vaig practicar amb l'app. Des de l'abril del 2026 les sessions són agèntiques: jo defineixo el problema i les regles, l'agent proposa el canvi i jo el reviso, el provo i el commito. Cap canvi arriba al repositori sense aquesta revisió.</p>
 <h2 id="decisions-tècniques">Decisions tècniques</h2>
 <ul>
-<li><strong>Hive CE en lloc d'Isar</strong> — Isar Community no era compatible amb la versió de <code>build_runner</code> que necessitava el projecte; el canvi va desbloquejar <code>build_runner</code> 2.15.1 → 2.16.1 i va deixar un sol generador per al model de dades.</li>
-<li><strong>Swift Package Manager en lloc de CocoaPods</strong> — menys capa de dependències i builds nadius a iOS i macOS, sense pods pel mig.</li>
+<li><strong>Hive CE en lloc d'Isar</strong> — Isar Community no era compatible amb la versió de <code>build_runner</code> que necessitava el projecte. El resultat: <code>build_runner</code> 2.15.1 → 2.16.1 desbloquejat i un sol generador per al model de dades.</li>
+<li><strong>Swift Package Manager en lloc de CocoaPods</strong> — una capa menys de dependències. El resultat: builds nadius a iOS i macOS, sense pods pel mig.</li>
 </ul>
 <h2 id="captures">Captures</h2>
 <h3 id="captures-de-lentrega-desembre-de-2025">Captures de l'entrega (desembre de 2025)</h3>
