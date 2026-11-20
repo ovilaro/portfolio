@@ -44,6 +44,7 @@
 <li><strong>Mosaic</strong>: open-source Flutter app to catalogue games and books, with Provider, Hive CE and the IGDB and Open Library APIs. <a href="mosaic.html">See the project</a></li>
 <li><strong>20+ client apps (2014–2017)</strong>: Ulabox, Foster's Hollywood, ABA English and the Santiago de Chile airport app, on iOS (Objective-C and Swift) and Android.</li>
 <li><strong>Local persistence</strong>: SQLite, Core Data and Realm in production apps; Hive CE in Mosaic.</li>
+<li><strong>Production migration</strong>: Core Data to Realm in an app with 10+ million users, to cut crash reports.</li>
 <li><strong>Training (CIFO, 2025)</strong>: 240 h of Flutter with Firebase as a backend (Auth and Firestore) and REST API consumption; course exercises such as <a href="https://github.com/ovilaro/chatter">chatter</a>.</li>
 </ul>
 <h2 id="applications">Applications</h2>
@@ -58,12 +59,13 @@
 </a>
 </div>
 
-<h2 id="backend-data-and-persistence">Backend, data and persistence</h2>
+<h2 id="backend">Backend</h2>
 <ul>
 <li><strong>Shell Shocked (PlayFab CloudScript)</strong>: leaderboards, level calendars and prizes for a live game with 145,000+ players. <a href="shell-shocked.html#backend-playfab">See the details</a></li>
 <li><strong>Flight-notification API</strong>: AWS EC2 with Node.js and MongoDB for the Santiago de Chile airport app.</li>
-<li><strong>Production migration</strong>: Core Data to Realm in an app with 10+ million users, to cut crash reports.</li>
 </ul>
+<h2 id="ai-evaluation">AI evaluation</h2>
+<p>Local and cloud test bench: I compare each model's code review against the changes I already know are there, and choose by cost, hit rate and data retention (ZDR). <a href="mosaic.html#agent-evaluation">Method and criteria</a>.</p>
 <h2 id="games">Games</h2>
 <div class="cards">
 <a class="card" href="hello-kitty.html">
