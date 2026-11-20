@@ -76,6 +76,10 @@ Tu navegador no puede reproducir este vídeo. <a href="../assets/hello-kitty/tra
 <td>Nintendo Switch · iOS, Android (Netflix Games, 2022)</td>
 </tr>
 <tr>
+<td><strong>Estado</strong></td>
+<td>Móvil (Netflix): retirado el 16 de marzo de 2026</td>
+</tr>
+<tr>
 <td><strong>Lanzamientos</strong></td>
 <td>26 de oct. de 2023 (Switch) · 30 de nov. de 2022 (móvil)</td>
 </tr>
@@ -98,7 +102,7 @@ Tu navegador no puede reproducir este vídeo. <a href="../assets/hello-kitty/tra
 </tbody>
 </table>
 <h2 id="nintendo-switch-2023">Nintendo Switch (2023)</h2>
-<p>Versión propia para Nintendo Switch, publicada el 26 de octubre de 2023 con contenido y controles nuevos.</p>
+<p>Versión para Nintendo Switch, publicada el 26 de octubre de 2023 con contenido y controles nuevos.</p>
 <h3 id="destacados">Destacados</h3>
 <ul>
 <li><strong>23 niveles</strong> con <strong>cinco finales diferentes</strong>, más <strong>3 niveles nuevos y 20 pistas exclusivas</strong> de Switch.</li>
@@ -110,7 +114,7 @@ Tu navegador no puede reproducir este vídeo. <a href="../assets/hello-kitty/tra
 <h3 id="decisiones-técnicas">Decisiones técnicas</h3>
 <ul>
 <li><strong>Addressables</strong> — la gestión de assets la implementé yo en móvil y Switch: paquetes por plataforma, carga bajo demanda y control de memoria.</li>
-<li><strong>Controles por gestos</strong> — entrenamos modelos para reconocer los gestos de los mandos, para poder jugar bailando de forma opcional, además de los botones y los Joy-Con.</li>
+<li><strong>Controles por gestos</strong> — dos programadores planteamos propuestas distintas para reconocer los gestos de los mandos; la que se integró fue la del otro programador, porque decidimos que era la mejor. El juego se puede jugar bailando de forma opcional, además de los botones y los Joy-Con.</li>
 <li><strong>Arquitectura del port</strong> — separar la capa de plataforma (entrada, guardado, rendimiento) del juego compartido con móvil, para no duplicar código ni hacer divergir las versiones.</li>
 <li><strong>Rendimiento y memoria</strong> — ajustar el presupuesto de memoria y el framerate de Switch sin recortar contenido.</li>
 <li><strong>Builds, QA y certificación</strong> — yo hacía las builds de Switch y móvil (también las del resto de juegos del estudio); Rogue ponía un productor y una empresa de QA, y yo era el enlace técnico, con acceso a los Jira de Rogue y Netflix. Los cambios complejos que pedían Nintendo o Netflix los resolvía yo. El juego pasó la certificación y salió el 26 de octubre de 2023.</li>
