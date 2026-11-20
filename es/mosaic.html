@@ -120,8 +120,8 @@ Tu navegador no puede reproducir este vídeo. <a href="../assets/mosaic/entrega-
 <p>Mosaic es el proyecto final del curso de Flutter (diciembre de 2025) y lo desarrollé yo, sin ninguna herramienta de IA. Al terminar el curso empecé a aprender herramientas agénticas por interés propio y las practiqué con la app. Desde abril de 2026 las sesiones son agénticas: yo defino el problema y las reglas, el agente propone el cambio y yo lo reviso, lo pruebo y lo commiteo. Ningún cambio llega al repositorio sin esa revisión.</p>
 <h2 id="decisiones-técnicas">Decisiones técnicas</h2>
 <ul>
-<li><strong>Hive CE en lugar de Isar</strong> — Isar Community no era compatible con la versión de <code>build_runner</code> que necesitaba el proyecto. El resultado: <code>build_runner</code> 2.15.1 → 2.16.1 desbloqueado y un solo generador para el modelo de datos.</li>
-<li><strong>Swift Package Manager en lugar de CocoaPods</strong> — una capa menos de dependencias. El resultado: builds nativos en iOS y macOS, sin pods por medio.</li>
+<li><strong>Hive CE en lugar de Isar</strong> — Isar Community prácticamente había dejado de mantenerse y me bloqueaba las actualizaciones de Flutter. La migración fue decisión mía y la hice rápidamente con ayuda de la IA; la app aún no tenía datos en producción, así que no había nada que perder. El resultado: actualizaciones de Flutter desbloqueadas y <code>build_runner</code> al día (2.15.1 → 2.16.1).</li>
+<li><strong>Swift Package Manager en lugar de CocoaPods</strong> — CocoaPods está en mantenimiento y su registro se congela el 2 de diciembre de 2026; Flutter ya usa Swift Package Manager por defecto. Migré el proyecto para no quedarme sin actualizaciones de dependencias. El resultado: builds nativos en iOS y macOS, sin pods por medio.</li>
 </ul>
 <h2 id="capturas">Capturas</h2>
 <h3 id="capturas-de-la-entrega-diciembre-de-2025">Capturas de la entrega (diciembre de 2025)</h3>

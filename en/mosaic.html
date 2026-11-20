@@ -120,8 +120,8 @@ Your browser can't play this video. <a href="../assets/mosaic/entrega-curs.mp4">
 <p>Mosaic is the final project for the Flutter course (December 2025) and I developed it myself, with no AI tools. After the course I started learning agentic tools out of my own interest and practised with the app. Since April 2026 the sessions are agentic: I define the problem and the rules, the agent proposes the change and I review it, test it and commit it. Nothing reaches the repository without that review.</p>
 <h2 id="technical-decisions">Technical decisions</h2>
 <ul>
-<li><strong>Hive CE instead of Isar</strong> — Isar Community was not compatible with the <code>build_runner</code> version the project needed. The result: <code>build_runner</code> 2.15.1 → 2.16.1 unblocked and a single generator for the data model.</li>
-<li><strong>Swift Package Manager instead of CocoaPods</strong> — one less dependency layer. The result: native builds on iOS and macOS, with no pods in between.</li>
+<li><strong>Hive CE instead of Isar</strong> — Isar Community had all but stopped being maintained, which blocked Flutter upgrades. The migration was my call and I did it quickly with AI assistance; the app had no production data yet, so there was nothing to lose. The result: Flutter upgrades unblocked and <code>build_runner</code> up to date (2.15.1 → 2.16.1).</li>
+<li><strong>Swift Package Manager instead of CocoaPods</strong> — CocoaPods is in maintenance mode and its registry becomes read-only on 2 December 2026; Flutter already defaults to Swift Package Manager. I migrated the project so it wouldn't be stuck without dependency updates. The result: native builds on iOS and macOS, with no pods in between.</li>
 </ul>
 <h2 id="screenshots">Screenshots</h2>
 <h3 id="delivery-screenshots-december-2025">Delivery screenshots (December 2025)</h3>
