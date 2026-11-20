@@ -103,14 +103,14 @@ El teu navegador no pot reproduir aquest vídeo. <a href="../assets/mosaic/entre
 <li><strong>Temes clar i fosc</strong> — blanc, negre o seguint el dispositiu.</li>
 <li><strong>Accessibilitat</strong> — etiquetes a la barra de navegació per a lectors de pantalla.</li>
 <li><strong>Offline-first</strong> — dades locals amb Hive CE, sense compte.</li>
-<li><strong>Disseny adaptable</strong> — a partir de 900 px d'amplada, la graella i el detall es mostren costat a costat.</li>
+<li><strong>Disseny adaptable (en curs)</strong> — a partir de 900 px d'amplada (per exemple, macOS d'escriptori), la graella i el detall es mostren costat a costat; en amplades molt grans, el cos del detall es divideix en dues columnes.</li>
 </ul>
 <h2 id="mètode">Mètode</h2>
 <p>Vaig fer el curs de Flutter per aprendre'n i el projecte final va ser Mosaic, sense cap agent pel mig. En acabar, vaig voler aprendre programació agèntica i vaig fer servir Mosaic com a camp de pràctiques: l'objectiu era aprendre a fer anar agents, i la millora de l'app va venir de retruc. Des d'aleshores el projecte es porta així: un document de convencions al repositori, <code>AGENTS.md</code>, descriu l'arquitectura, el model de dades, el tema, les regles de les API i el catàleg de widgets, i qualsevol sessió comença amb el mateix context i les mateixes regles en lloc d'un encàrrec improvisat.</p>
 <ul>
 <li><strong>Convencions al repositori</strong> — <code>AGENTS.md</code> és a l'arrel des de l'abril del 2026 i s'ha anat revisant amb el projecte.</li>
 <li><strong>Regles dures</strong> — els fitxers generats (<code>.g.dart</code> i l'esquema de Hive) no es toquen a mà: qualsevol canvi de model passa per <code>build_runner</code>.</li>
-<li><strong>Treball fet amb aquest flux</strong> — migració d'Isar Community a Hive CE (que va desbloquejar <code>build_runner</code> 2.15.1 → 2.16.1), substitució de CocoaPods per Swift Package Manager a iOS i macOS, i toolchain al dia (Flutter 3.47.5, AGP 9.1, Gradle 9.3.1, Kotlin 2.4).</li>
+<li><strong>Treball fet amb aquest flux</strong> — migració d'Isar Community a Hive CE (que va desbloquejar <code>build_runner</code> 2.15.1 → 2.16.1), substitució de CocoaPods per Swift Package Manager a iOS i macOS, i toolchain al dia (Flutter 3.47.6, AGP 9.1.0, Gradle 9.3.1, Kotlin 2.4.0).</li>
 </ul>
 <h3 id="escrit-per-mi-els-agents-després">Escrit per mi; els agents, després</h3>
 <p>Mosaic és el projecte final del curs de Flutter (desembre de 2025) i el vaig desenvolupar jo, sense cap eina d'IA. En acabar el curs vaig començar a aprendre eines agèntiques per interès propi i les vaig practicar amb l'app. Des de l'abril del 2026 les sessions són agèntiques: jo defineixo el problema i les regles, l'agent proposa el canvi i jo el reviso, el provo i el commito. Cap canvi arriba al repositori sense aquesta revisió.</p>
