@@ -118,6 +118,10 @@ Tu navegador no puede reproducir este vídeo. <a href="../assets/mosaic/entrega-
 </ul>
 <h3 id="escrito-por-mí-los-agentes-después">Escrito por mí; los agentes, después</h3>
 <p>Mosaic es el proyecto final del curso de Flutter (diciembre de 2025) y lo desarrollé yo, sin ninguna herramienta de IA. Al terminar el curso empecé a aprender herramientas agénticas por interés propio y las practiqué con la app. Desde abril de 2026 las sesiones son agénticas: yo defino el problema y las reglas, el agente propone el cambio y yo lo reviso, lo pruebo y lo commiteo. Ningún cambio llega al repositorio sin esa revisión.</p>
+<h3 id="evaluación-de-agentes">Evaluación de agentes</h3>
+<p>Banco de pruebas: revisión de cambios pendientes con modelos locales sobre una RTX 2060 de 12 GB y 32 GB de DDR4, de Ollama a llama.cpp. Después de comparar cuantizaciones y modelos (Qwen3.8 27B, Qwen3.5 9B, Qwen3.5 35B-A3B MoE, Gemma 3 y Gemma 4), me quedé con <strong>Qwen3.6-35B-A3B MoE en UD-IQ3_XXS</strong>, con offload y 128k de contexto (64k cuando activo la visión). En la nube probé Ollama Cloud, Codex y Claude Code, y me quedé con <strong>OpenCode Go con DeepSeek 4.1 Flash</strong> por coste/inteligencia, con el Qwen local como fallback.</p>
+<p>Lo que comparo es el <strong>code review</strong> que me da cada modelo: yo sé qué cambios hay y cuáles faltan, y miro cuál acierta, cuáles se inventa y cuáles se le escapan. El código AGPL hace de verdad de referencia.</p>
+<p>La elección no va por popularidad: miro coste por sesión, peticiones por euro y retención de datos (ZDR).</p>
 <h2 id="decisiones-técnicas">Decisiones técnicas</h2>
 <ul>
 <li><strong>Hive CE en lugar de Isar</strong> — Isar Community prácticamente había dejado de mantenerse y me bloqueaba las actualizaciones de Flutter. La migración fue decisión mía y la hice rápidamente con ayuda de la IA; la app aún no tenía datos en producción, así que no había nada que perder. El resultado: actualizaciones de Flutter desbloqueadas y <code>build_runner</code> al día (2.15.1 → 2.16.1).</li>

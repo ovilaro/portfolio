@@ -118,6 +118,10 @@ Your browser can't play this video. <a href="../assets/mosaic/entrega-curs.mp4">
 </ul>
 <h3 id="written-by-me-agents-came-later">Written by me; agents came later</h3>
 <p>Mosaic is the final project for the Flutter course (December 2025) and I developed it myself, with no AI tools. After the course I started learning agentic tools out of my own interest and practised with the app. Since April 2026 the sessions are agentic: I define the problem and the rules, the agent proposes the change and I review it, test it and commit it. Nothing reaches the repository without that review.</p>
+<h3 id="agent-evaluation">Agent evaluation</h3>
+<p>Test bench: reviewing pending changes with local models on an RTX 2060 12 GB and 32 GB of DDR4, moving from Ollama to llama.cpp. After comparing quantisations and models (Qwen3.8 27B, Qwen3.5 9B, Qwen3.5 35B-A3B MoE, Gemma 3 and Gemma 4), I settled on <strong>Qwen3.6-35B-A3B MoE at UD-IQ3_XXS</strong>, with offload and 128k of context (64k with vision enabled). In the cloud I tried Ollama Cloud, Codex and Claude Code, and settled on <strong>OpenCode Go with DeepSeek 4.1 Flash</strong> for cost/intelligence, with the local Qwen as fallback.</p>
+<p>What I compare is the <strong>code review</strong> each model gives me: I know which changes are there and which are missing, so I can see which one gets them right, which invents them and which misses them. The AGPL code is the reference truth.</p>
+<p>Tool choice isn't about popularity: cost per session, requests per euro and data retention (ZDR).</p>
 <h2 id="technical-decisions">Technical decisions</h2>
 <ul>
 <li><strong>Hive CE instead of Isar</strong> — Isar Community had all but stopped being maintained, which blocked Flutter upgrades. The migration was my call and I did it quickly with AI assistance; the app had no production data yet, so there was nothing to lose. The result: Flutter upgrades unblocked and <code>build_runner</code> up to date (2.15.1 → 2.16.1).</li>
